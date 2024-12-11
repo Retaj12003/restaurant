@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-      target:  "restaurant-ochre-alpha.vercel.app/api", 
+      target:  "restaurant-ochre-alpha.vercel.app", 
     
       },
     },
