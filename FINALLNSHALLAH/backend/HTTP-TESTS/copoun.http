@@ -1,0 +1,36 @@
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "omar227931@bue.edu.eg",
+  "password": "12345678"
+}
+
+###Get Copoun
+GET http://localhost:5000/api/coupons
+
+###Validate coupon
+POST http://localhost:5000/api/coupons/validate
+Content-Type: application/json
+
+{
+  "code": "12345678"
+}
+
+###Create test coupon       
+POST http://localhost:5000/api/coupons/create-test
+Content-Type: application/json
+
+{
+  "code": "233sdssd",
+  "discountPercentage": 10
+}
+
+###Deactivate coupon
+PUT http://localhost:5000/api/coupons/deactivate
+Content-Type: application/json
+
+{
+  "code": "GIFTO8DBSY",
+  "userId": "67573f10237974cd7e21563b"
+}

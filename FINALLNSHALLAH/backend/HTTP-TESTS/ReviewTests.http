@@ -1,0 +1,17 @@
+###Add a Review
+POST http://localhost:5000/api/reviews/products/67557ba27a88cdd6f25df541
+Content-Type: application/json
+
+{
+  "rating": 5,
+  "comment": "TTT Excellent dish!",
+  "dishId": "67557ba27a88cdd6f25df541",
+  "userId": "67559d638d538f2bb778a021"
+}
+
+###Delete Review
+DELETE http://localhost:5000/api/reviews/6758c99ee5efc64472751bc7
+Content-Type: application/json
+
+###Retrive reviews
+GET http://localhost:5000/api/reviews/products/67557ba27a88cdd6f25df541

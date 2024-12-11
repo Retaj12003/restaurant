@@ -1,0 +1,35 @@
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "omar227931@bue.edu.eg",
+  "password": "12345678"
+}
+
+###Get Dishes
+GET http://localhost:5000/api/products
+
+
+###Add product
+POST http://localhost:5000/api/products
+Content-Type: application/json
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU0YzYwNTExZGViYmI1OTM5MDNkNTAiLCJpYXQiOjE3MzM2NDk2NjQsImV4cCI6MTczMzczNjA2NH0.QWP_oTvXthXYIDmjIIyQ-tvJlTlNQoKaIok_64nvs4g
+
+{
+  "name": "PizzaKOKO",
+  "description": "A delicious Italian pizza with a crispy crust and fresh toppings.",
+  "price": 9.99,
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/1200px-Pizza-3007395.jpg",
+  "category": "Italian",
+  "isFeatured": true,
+  "createdAt": "2024-12-08T12:00:00Z",
+  "updatedAt": "2024-12-08T12:00:00Z"
+}
+
+###Delete Dish
+DELETE http://localhost:5000/api/products/6758c611e5efc64472751a7f
+Content-Type: application/json
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU0YzYwNTExZGViYmI1OTM5MDNkNTAiLCJpYXQiOjE3MzM2NDk2NjQsImV4cCI6MTczMzczNjA2NH0.QWP_oTvXthXYIDmjIIyQ-tvJlTlNQoKaIok_64nvs4g
+
+###Get Category
+GET http://localhost:5000/api/category/:burgers

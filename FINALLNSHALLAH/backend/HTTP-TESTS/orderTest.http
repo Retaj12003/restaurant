@@ -1,0 +1,16 @@
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "yara@gmail.com",
+  "password": "12345678"
+}
+
+###Get orders
+GET http://localhost:5000/api/orders/my-orders
+
+###Get orders of specific user
+GET http://localhost:5000/api/orders/67573f10237974cd7e21563b
+
+###Delete order by admin
+GET http://localhost:5000/api/orders/6757e9b615407737ae9ff4e4
