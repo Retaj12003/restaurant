@@ -36,7 +36,11 @@ app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/reviews", reviewsRoutes);
-
+app.get('/', (req, res) => {
+  res.send({
+    data: 'Hello there!'
+  });
+});
 
 app.listen(PORT, () => {
 	console.log("Server is running on http://localhost:" + PORT);
