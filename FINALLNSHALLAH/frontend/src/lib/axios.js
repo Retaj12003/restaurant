@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "restaurant-ochre-alpha.vercel.app/api", 
+  baseURL: "restaurant-ochre-alpha.vercel.app", 
   withCredentials: true,
 });
 
