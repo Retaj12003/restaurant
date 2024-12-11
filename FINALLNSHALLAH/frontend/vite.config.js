@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -7,9 +8,9 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: `${process.env.VITE_API_URL}`,
-
-        
+        target: `${import.meta.env.VITE_API_URL}`,  // Ensure VITE_API_URL is defined in .env
+        changeOrigin: true, // This will help with cross-origin requests
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
