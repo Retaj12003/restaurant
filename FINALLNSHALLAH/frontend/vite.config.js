@@ -7,9 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: `${import.meta.env.VITE_API_URL}`, // Ensure VITE_API_URL is correctly set
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
+       baseURL: "restaurant-ochre-alpha.vercel.app/api", 
+    
       },
     },
   },
